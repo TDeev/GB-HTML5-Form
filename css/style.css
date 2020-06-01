@@ -1,0 +1,251 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.wrap{
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgb(243, 241, 241);
+    box-sizing: border-box;
+}
+
+.title{
+    text-transform: uppercase;
+    width: 200px;
+    text-align: end;
+    padding: 40px 65px 0 0;
+    color: #87ccb7;
+}
+
+/* ==============ТИП============== */
+.type{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.type-content{
+    font-weight: bold;
+    padding: 40px 0 45px 0;
+}
+
+.type-content-rb{
+    position: relative;
+    padding: 0 0 0 45px;
+    margin: 0 0 30px 0;
+}
+
+.type-content-rb:last-child{
+    margin: 0;
+}
+
+input[type="radio"]:checked, input[type="radio"]:not(:checked){
+    display: none;
+    /* position: absolute;
+    left: -40px; */
+}
+
+input[type="radio"]+.type-content-item::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -6px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #515151;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked+.type-content-item::after{
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #68c5a9;
+}
+
+/* ==============ЦВЕТ============== */
+.color{
+    display: flex;
+    flex-direction: row;
+    background-color: #efefef;
+}
+
+.color-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* align-content: center; */
+    font-weight: bold;
+    padding: 40px 0 45px 0;
+    width: 660px;
+
+    /* min-height: 60px;
+    align-content: space-between; */
+}
+
+.color-item{
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    padding: 0 0 0 45px;
+    box-sizing: border-box;
+
+    min-height: 45px;
+
+    /* margin: 0 0 30px 0; */
+}
+
+/* .color-item:nth-child(4), .color-item:nth-child(5), .color-item:nth-child(6) {
+    margin: 0;
+} */
+
+
+
+input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked){
+    display: none;
+}
+
+.color-item label{
+    position: relative;
+    /* padding: 15px 0 15px 0; */
+}
+
+.color-item label::before{
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: -7px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #515151;
+    border-radius: 5%;
+}
+
+input[type="checkbox"]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0px;
+    width: 20px;
+    height: 10px;
+    border-radius: 1px;
+    border-left: 3px solid #68c5a9;
+    border-bottom: 3px solid #68c5a9;
+    transform: rotate(-45deg);
+}
+
+/* ==============КОНТАКТЫ============== */
+.contacts{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-content{
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: stretch; */
+    width: 560px;
+    font-weight: bold;
+    padding: 24px 0 45px 0;
+}
+/* !тут пришлось шаманить с падингом */
+
+.contact-content-item{
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-content-item:last-child{
+    margin: 0;
+}
+
+.contact-content-item label{
+    margin: 0 20px 0 0;
+}
+
+.contact-content-item input[type="text"]{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    width: 100%;
+}
+
+.contact-content-item input[type="text"]::-webkit-input-placeholder { 
+    color: #d1d1d1;
+
+}
+
+
+/* ==============ТЕЛЕФОН============== */
+.tel{
+    display: flex;
+    flex-direction: row;
+    background-color: #efefef;
+}
+
+.tel-content {
+    width: 560px;
+    font-weight: bold;
+    padding: 25px 0 45px 0;
+}
+
+.tel-content-item {
+    margin: 0 0 10px 0;
+    position: relative;
+}
+
+.tel-content-item:last-child{
+    margin: 0;
+}
+
+.tel-content-item-tel{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    width: 100%;
+    background: none;
+    box-sizing: border-box;
+}
+
+.fa-phone-alt, .fa-envelope{
+    position: absolute;
+    right: 7px;
+    top: 20px;
+    bottom: 0;
+    color: #d1d1d1;
+}
+
+.tel-content-item-eml{
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 15px 0 15px 10px;
+    width: 100%;
+    background: none; 
+    box-sizing: border-box;   
+}
+
+.tel-content input::-webkit-input-placeholder { 
+    color: #d1d1d1;
+    
+}
+
+
+/* ==============ФУТЕР============== */
+.ftr{
+    height: 45px;
+}
